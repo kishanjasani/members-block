@@ -4,7 +4,7 @@
 	"name": "kishanjasani/team-members",
 	"title": "Team Members",
 	"category": "widgets",
-	"icon": "admin-users",
+	"icon": "groups",
 	"description": "A team members block.",
 	"keywords": [ "Team", "Members", "Grid" ],
 	"supports": {
