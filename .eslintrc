@@ -1,7 +1,6 @@
 {
 	"extends": [ "plugin:@wordpress/eslint-plugin/recommended-with-formatting", "prettier" ],
 	"parserOptions": {
-		"requireConfigFile": false,
 		"babelOptions": {
 			"presets": [ "@wordpress/babel-preset-default" ]
 		}

@@ -33,6 +33,7 @@ function Edit(props) {
     className: `has-${columns}-columns`
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_inspector__WEBPACK_IMPORTED_MODULE_3__["default"], props), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: ['kishanjasani/team-member'],
+    orientation: "horizontal",
     template: [['kishanjasani/team-member'], ['kishanjasani/team-member'], ['kishanjasani/team-member']]
   }));
 }

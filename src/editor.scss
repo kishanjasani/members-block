@@ -5,5 +5,26 @@
  */
 
 .wp-block-kishanjasani-team-members {
-	border: 1px dotted #f03;
+	display: block;
+
+	@for $i from 1 through 6 {
+
+		&.has-#{$i}-columns {
+
+			> .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] {
+				width: calc(100% / #{$i} - 20px);
+			}
+		}
+	}
+
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		> [data-type="kishanjasani/team-member"] {
+			margin: 10px;
+		}
+	}
 }

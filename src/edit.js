@@ -11,6 +11,7 @@ export default function Edit(props) {
 			<Inspector {...props} />
 			<InnerBlocks
 				allowedBlocks={['kishanjasani/team-member']}
+				orientation="horizontal"
 				template={[
 					['kishanjasani/team-member'],
 					['kishanjasani/team-member'],
