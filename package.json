@@ -38,6 +38,7 @@
 		"lint-staged": "^13.1.2"
 	},
 	"dependencies": {
+		"@wordpress/blob": "^3.28.0",
 		"@wordpress/block-editor": "^11.5.0",
 		"@wordpress/blocks": "^12.5.0",
 		"@wordpress/components": "^23.5.0",

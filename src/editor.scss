@@ -11,10 +11,26 @@
 
 		&.has-#{$i}-columns {
 
-			> .block-editor-inner-blocks > .block-editor-block-list__layout {
+			> .block-editor-inner-blocks > .block-editor-block-list__layout > {
 
 				[data-type="kishanjasani/team-member"] {
 					width: calc(100% / #{$i} - 20px);
+
+					.wp-block-kishanjasani-team-member-img {
+						position: relative;
+						margin-bottom: 20px;
+
+						&.is-loading img {
+							opacity: 0.3;
+						}
+
+						.components-spinner {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
 				}
 
 				.block-list-appender {
