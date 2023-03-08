@@ -9,8 +9,10 @@ import {
 import { __ } from '@wordpress/i18n';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { Spinner, withNotices, ToolbarButton } from '@wordpress/components';
+import Inspector from './inspector';
 
-function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
+function Edit(props) {
+	const { attributes, setAttributes, noticeOperations, noticeUI } = props;
 	const { name, bio, id, alt, url } = attributes;
 
 	const [blobURL, setBlobURL] = useState();
@@ -62,6 +64,7 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 
 	return (
 		<>
+			<Inspector {...props} />
 			{url && (
 				<BlockControls>
 					<MediaReplaceFlow
