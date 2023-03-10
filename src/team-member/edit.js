@@ -1,4 +1,4 @@
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState, useRef } from '@wordpress/element';
 import {
 	useBlockProps,
 	RichText,
@@ -9,6 +9,7 @@ import {
 import { __ } from '@wordpress/i18n';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { Spinner, withNotices, ToolbarButton } from '@wordpress/components';
+import { usePrevious } from '@wordpress/compose';
 import Inspector from './inspector';
 
 function Edit(props) {
@@ -16,6 +17,8 @@ function Edit(props) {
 	const { name, bio, id, alt, url } = attributes;
 
 	const [blobURL, setBlobURL] = useState();
+	const titleRef = useRef();
+	const previousUrl = usePrevious(url);
 
 	const onChangeName = (newName) => {
 		setAttributes({ name: newName });
@@ -62,6 +65,12 @@ function Edit(props) {
 		}
 	}, [url]);
 
+	useEffect(() => {
+		if (url && !previousUrl) {
+			titleRef.current.focus();
+		}
+	}, [url, previousUrl]);
+
 	return (
 		<>
 			<Inspector {...props} />
@@ -107,6 +116,7 @@ function Edit(props) {
 					tagName="h3"
 					value={name}
 					onChange={onChangeName}
+					ref={titleRef}
 				/>
 				<RichText
 					placeholder={__('Member Bio', 'team-members')}
