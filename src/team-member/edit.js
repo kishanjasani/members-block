@@ -8,13 +8,25 @@ import {
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
-import { Spinner, withNotices, ToolbarButton } from '@wordpress/components';
+import {
+	Spinner,
+	withNotices,
+	ToolbarButton,
+	Icon,
+	Tooltip,
+} from '@wordpress/components';
 import { usePrevious } from '@wordpress/compose';
 import Inspector from './inspector';
 
 function Edit(props) {
-	const { attributes, setAttributes, noticeOperations, noticeUI } = props;
-	const { name, bio, id, alt, url } = attributes;
+	const {
+		attributes,
+		setAttributes,
+		noticeOperations,
+		noticeUI,
+		isSelected,
+	} = props;
+	const { name, bio, id, alt, url, socialLinks } = attributes;
 
 	const [blobURL, setBlobURL] = useState();
 	const titleRef = useRef();
@@ -124,6 +136,33 @@ function Edit(props) {
 					value={bio}
 					onChange={onChangeBio}
 				/>
+				<div className="wp-block-kishanjasani-team-member-social-links">
+					<ul>
+						{socialLinks.map((item, index) => {
+							return (
+								<li key={index}>
+									<Icon icon={item.icon} />
+								</li>
+							);
+						})}
+						{isSelected && (
+							<li className="wp-block-kishanjasani-team-member-add-icon">
+								<Tooltip
+									text={__('Add Social Link', 'team-members')}
+								>
+									<button
+										aria-label={__(
+											'Add Social Link',
+											'team-members'
+										)}
+									>
+										<Icon icon="plus" />
+									</button>
+								</Tooltip>
+							</li>
+						)}
+					</ul>
+				</div>
 			</div>
 		</>
 	);

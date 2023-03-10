@@ -39,6 +39,13 @@ registerBlockType('kishanjasani/team-member', {
 			selector: 'img',
 			attribute: 'src',
 		},
+		socialLinks: {
+			type: 'array',
+			default: [
+				{ link: 'https://facebook.com', icon: 'facebook' },
+				{ link: 'https://twitter.com', icon: 'twitter' },
+			],
+		},
 	},
 	edit: Edit,
 	save,
