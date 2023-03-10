@@ -8,7 +8,8 @@
 	"description": "A team members block.",
 	"keywords": [ "Team", "Members", "Grid" ],
 	"supports": {
-		"html": false
+		"html": false,
+		"align": [ "wide", "full" ]
 	},
 	"textdomain": "team-members",
 	"editorScript": "file:./build/index.js",
