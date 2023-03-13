@@ -26,5 +26,28 @@
 		img {
 			margin-bottom: 20px;
 		}
+
+		.wp-block-kishanjasani-team-member-social-links {
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: auto -5px;
+			}
+
+			li {
+				display: inline-block;
+				margin: 10px 5px;
+				cursor: pointer;
+
+				a {
+					text-decoration: none;
+				}
+
+				span.dashicon {
+					color: #4e4e4e;
+				}
+			}
+		}
 	}
 }

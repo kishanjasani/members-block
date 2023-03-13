@@ -37,5 +37,21 @@
 .wp-block-kishanjasani-team-members .wp-block-kishanjasani-team-member img {
   margin-bottom: 20px;
 }
+.wp-block-kishanjasani-team-members .wp-block-kishanjasani-team-member .wp-block-kishanjasani-team-member-social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: auto -5px;
+}
+.wp-block-kishanjasani-team-members .wp-block-kishanjasani-team-member .wp-block-kishanjasani-team-member-social-links li {
+  display: inline-block;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+.wp-block-kishanjasani-team-members .wp-block-kishanjasani-team-member .wp-block-kishanjasani-team-member-social-links li a {
+  text-decoration: none;
+}
+.wp-block-kishanjasani-team-members .wp-block-kishanjasani-team-member .wp-block-kishanjasani-team-member-social-links li span.dashicon {
+  color: #4e4e4e;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

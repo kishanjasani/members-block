@@ -29,8 +29,12 @@ function Edit(props) {
 	const { name, bio, id, alt, url, socialLinks } = attributes;
 
 	const [blobURL, setBlobURL] = useState();
+	const [selectedSocialLink, setSelectedSocialLink] = useState();
+
 	const titleRef = useRef();
+
 	const previousUrl = usePrevious(url);
+	const isPrevSelected = usePrevious(isSelected);
 
 	const onChangeName = (newName) => {
 		setAttributes({ name: newName });
@@ -62,6 +66,14 @@ function Edit(props) {
 		setAttributes({ id: undefined, alt: '', url: undefined });
 	};
 
+	const addNewSocialLink = () => {
+		setAttributes({
+			socialLinks: [...socialLinks, { link: '', icon: 'wordpress' }],
+		});
+
+		setSelectedSocialLink(socialLinks.length);
+	};
+
 	useEffect(() => {
 		if (!id && isBlobURL(url)) {
 			setAttributes({ alt: '', url: undefined });
@@ -82,6 +94,12 @@ function Edit(props) {
 			titleRef.current.focus();
 		}
 	}, [url, previousUrl]);
+
+	useEffect(() => {
+		if (isPrevSelected && !isSelected) {
+			setSelectedSocialLink();
+		}
+	}, [isSelected, isPrevSelected]);
 
 	return (
 		<>
@@ -140,8 +158,28 @@ function Edit(props) {
 					<ul>
 						{socialLinks.map((item, index) => {
 							return (
-								<li key={index}>
-									<Icon icon={item.icon} />
+								<li
+									key={index}
+									className={
+										selectedSocialLink === index
+											? 'is-selected'
+											: null
+									}
+								>
+									<button
+										aria-label={__(
+											'Edit Social Link',
+											'team-members'
+										)}
+										onClick={() =>
+											setSelectedSocialLink(index)
+										}
+									>
+										<Icon
+											icon={item.icon}
+											aria-hidden={true}
+										/>
+									</button>
 								</li>
 							);
 						})}
@@ -155,8 +193,9 @@ function Edit(props) {
 											'Add Social Link',
 											'team-members'
 										)}
+										onClick={addNewSocialLink}
 									>
-										<Icon icon="plus" />
+										<Icon icon="plus" aria-hidden={true} />
 									</button>
 								</Tooltip>
 							</li>
