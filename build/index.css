@@ -14,7 +14,6 @@
 }
 .wp-block-kishanjasani-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -39,7 +38,6 @@
 }
 .wp-block-kishanjasani-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -64,7 +62,6 @@
 }
 .wp-block-kishanjasani-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -89,7 +86,6 @@
 }
 .wp-block-kishanjasani-team-members.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -114,7 +110,6 @@
 }
 .wp-block-kishanjasani-team-members.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -139,7 +134,6 @@
 }
 .wp-block-kishanjasani-team-members.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img {
   position: relative;
-  margin-bottom: 20px;
 }
 .wp-block-kishanjasani-team-members.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] .wp-block-kishanjasani-team-member-img.is-loading img {
   opacity: 0.3;
@@ -167,6 +161,25 @@
 }
 .wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="kishanjasani/team-member"] {
   margin: 10px;
+}
+.wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: auto -5px;
+}
+.wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-links li {
+  display: inline-block;
+  margin: 10px 5px;
+  vertical-align: middle;
+}
+.wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-links li span {
+  display: block;
+}
+.wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-links .wp-block-kishanjasani-team-member-add-icon button {
+  background: none;
+  border: 0;
+  outline: 1px dotted;
+  padding: 4px;
 }
 
 /*# sourceMappingURL=index.css.map*/
