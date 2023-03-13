@@ -389,12 +389,25 @@ __webpack_require__.r(__webpack_exports__);
     },
     socialLinks: {
       type: 'array',
+      source: 'query',
+      selector: '.wp-block-kishanjasani-team-member-social-links li',
+      query: {
+        icon: {
+          source: 'attribute',
+          attribute: 'data-icon'
+        },
+        link: {
+          selector: 'a',
+          source: 'attribute',
+          attribute: 'href'
+        }
+      },
       default: [{
-        link: 'https://facebook.com',
-        icon: 'facebook'
+        icon: 'facebook',
+        link: 'https://facebook.com'
       }, {
-        link: 'https://twitter.com',
-        icon: 'twitter'
+        icon: 'twitter',
+        link: 'https://twitter.com'
       }]
     }
   },
@@ -539,13 +552,16 @@ function save(_ref) {
     className: "wp-block-kishanjasani-team-member-social-links"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, socialLinks.map((item, index) => {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-      key: index
+      key: index,
+      "data-icon": item.icon
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
       href: item.link,
       target: "_blank",
-      rel: "noreferrer"
+      rel: "noreferrer noopener",
+      "aria-label": `${item.icon} Link`
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Icon, {
-      icon: item.icon
+      icon: item.icon,
+      "aria-hidden": true
     })));
   }))));
 }

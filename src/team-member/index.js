@@ -41,9 +41,22 @@ registerBlockType('kishanjasani/team-member', {
 		},
 		socialLinks: {
 			type: 'array',
+			source: 'query',
+			selector: '.wp-block-kishanjasani-team-member-social-links li',
+			query: {
+				icon: {
+					source: 'attribute',
+					attribute: 'data-icon',
+				},
+				link: {
+					selector: 'a',
+					source: 'attribute',
+					attribute: 'href',
+				},
+			},
 			default: [
-				{ link: 'https://facebook.com', icon: 'facebook' },
-				{ link: 'https://twitter.com', icon: 'twitter' },
+				{ icon: 'facebook', link: 'https://facebook.com' },
+				{ icon: 'twitter', link: 'https://twitter.com' },
 			],
 		},
 	},

@@ -19,13 +19,17 @@ export default function save({ attributes }) {
 					<ul>
 						{socialLinks.map((item, index) => {
 							return (
-								<li key={index}>
+								<li key={index} data-icon={item.icon}>
 									<a
 										href={item.link}
 										target="_blank"
-										rel="noreferrer"
+										rel="noreferrer noopener"
+										aria-label={`${item.icon} Link`}
 									>
-										<Icon icon={item.icon} />
+										<Icon
+											icon={item.icon}
+											aria-hidden={true}
+										/>
 									</a>
 								</li>
 							);
