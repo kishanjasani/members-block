@@ -14,6 +14,8 @@ import {
 	ToolbarButton,
 	Icon,
 	Tooltip,
+	TextControl,
+	Button,
 } from '@wordpress/components';
 import { usePrevious } from '@wordpress/compose';
 import Inspector from './inspector';
@@ -72,6 +74,12 @@ function Edit(props) {
 		});
 
 		setSelectedSocialLink(socialLinks.length);
+	};
+
+	const updateSocialItem = (type, value) => {
+		const socialLinksCopy = [...socialLinks];
+		socialLinksCopy[selectedSocialLink][type] = value;
+		setAttributes({ socialLinks: socialLinksCopy });
 	};
 
 	useEffect(() => {
@@ -202,6 +210,28 @@ function Edit(props) {
 						)}
 					</ul>
 				</div>
+				{selectedSocialLink !== undefined && (
+					<div className="wp-block-kishanjasani-team-member-social-form">
+						<TextControl
+							label={__('Icon', 'team-members')}
+							value={socialLinks[selectedSocialLink].icon}
+							onChange={(icon) => {
+								updateSocialItem('icon', icon);
+							}}
+						/>
+						<TextControl
+							label={__('URL', 'team-members')}
+							value={socialLinks[selectedSocialLink].link}
+							onChange={(link) => {
+								updateSocialItem('link', link);
+							}}
+						/>
+						<br />
+						<Button isDestructive>
+							{__('Remove Link', 'team-members')}
+						</Button>
+					</div>
+				)}
 			</div>
 		</>
 	);

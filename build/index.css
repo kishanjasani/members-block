@@ -194,5 +194,11 @@
 .wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-links .wp-block-kishanjasani-team-member-add-icon button {
   outline: 1px dotted;
 }
+.wp-block-kishanjasani-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout .wp-block-kishanjasani-team-member-social-form {
+  background-color: #fff;
+  border: 1px dashed;
+  padding: 10px;
+  margin-top: 10px;
+}
 
 /*# sourceMappingURL=index.css.map*/

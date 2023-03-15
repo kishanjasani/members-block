@@ -244,6 +244,13 @@ function Edit(props) {
     });
     setSelectedSocialLink(socialLinks.length);
   };
+  const updateSocialItem = (type, value) => {
+    const socialLinksCopy = [...socialLinks];
+    socialLinksCopy[selectedSocialLink][type] = value;
+    setAttributes({
+      socialLinks: socialLinksCopy
+    });
+  };
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!id && (0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__.isBlobURL)(url)) {
       setAttributes({
@@ -328,7 +335,23 @@ function Edit(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Icon, {
     icon: "plus",
     "aria-hidden": true
-  }))))))));
+  })))))), selectedSocialLink !== undefined && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "wp-block-kishanjasani-team-member-social-form"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon', 'team-members'),
+    value: socialLinks[selectedSocialLink].icon,
+    onChange: icon => {
+      updateSocialItem('icon', icon);
+    }
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('URL', 'team-members'),
+    value: socialLinks[selectedSocialLink].link,
+    onChange: link => {
+      updateSocialItem('link', link);
+    }
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("br", null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    isDestructive: true
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Remove Link', 'team-members')))));
 }
 /* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.withNotices)(Edit));
 
