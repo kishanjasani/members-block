@@ -26,7 +26,7 @@
 }
 .wp-block-kishanjasani-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 1 - 20px);
+  width: calc(100% / 1 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@
 }
 .wp-block-kishanjasani-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 2 - 20px);
+  width: calc(100% / 2 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,7 @@
 }
 .wp-block-kishanjasani-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 3 - 20px);
+  width: calc(100% / 3 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@
 }
 .wp-block-kishanjasani-team-members.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 4 - 20px);
+  width: calc(100% / 4 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +126,7 @@
 }
 .wp-block-kishanjasani-team-members.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 5 - 20px);
+  width: calc(100% / 5 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +151,7 @@
 }
 .wp-block-kishanjasani-team-members.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
   position: initial;
-  width: calc(100% / 6 - 20px);
+  width: calc(100% / 6 - 22px);
   display: flex;
   align-items: center;
   justify-content: center;
