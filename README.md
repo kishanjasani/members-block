@@ -7,9 +7,11 @@ A custom WordPress block plugin for displaying team members in a grid layout. Bu
 -   Fully customizable team member block for the Gutenberg editor.
 -   Add team members with names, designations, and profile images.
 -   Responsive grid layout for a seamless display.
--   Simple and lightweight, following best coding practices.
+-   Simple and lightweight following best coding practices.
 
 ## Demo
+![team-member-demo](https://github.com/user-attachments/assets/ccff24d9-99d8-461e-8280-8657f3410e72)
+
 
 ## Installation
 
