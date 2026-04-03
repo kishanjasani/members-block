@@ -21,8 +21,9 @@ const Inspector = (props) => {
 
 	const imgObject = useSelect(
 		(select) => {
-			const { getMedia } = select('core');
-			return id ? getMedia(id) : null;
+			const { getEntityRecord } = select('core');
+
+			return id ? getEntityRecord('postType', 'attachment', id) : null;
 		},
 		[id]
 	);

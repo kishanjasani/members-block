@@ -1,7 +1,8 @@
 {
-	"$schema": "https://json.schemastore.org/block.json",
-	"apiVersion": 2,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
 	"name": "kishanjasani/team-members",
+	"version": "0.1.0",
 	"title": "Team Members",
 	"category": "widgets",
 	"icon": "groups",
@@ -11,14 +12,14 @@
 		"html": false,
 		"align": [ "wide", "full" ]
 	},
-	"textdomain": "team-members",
-	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css",
 	"attributes": {
 		"columns": {
 			"type": "number",
 			"default": 2
 		}
-	}
+	},
+	"textdomain": "team-members",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
 }

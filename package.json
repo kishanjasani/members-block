@@ -4,13 +4,17 @@
 	"description": "",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build",
-		"start": "wp-scripts start",
+		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
+		"start": "wp-scripts start --webpack-copy-php --blocks-manifest",
 		"format": "wp-scripts format  && stylelint \"**/*.scss\" --fix",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"test:unit": "wp-scripts test-unit-js",
+		"test:unit:help": "wp-scripts test-unit-js --help",
+        "test:unit:watch": "wp-scripts test-unit-js --watch",
+		"test:unit:debug": "wp-scripts --inspect-brk test-unit-js --runInBand --no-cache"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
@@ -48,5 +52,3 @@
 		"lint-staged": "^16.4.0"
 	}
 }
-
-
